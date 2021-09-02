@@ -1,2 +1,3 @@
 mnist-classifier/training_set
 mnist-classifier/validation_set
+mnist-classifier/mnist_model.pt
