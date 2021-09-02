@@ -42,7 +42,7 @@ loss = criterion(logps, labels)
 
 loss.backward()
 optimizer = optim.SGD(model.parameters(), lr = 0.003, momentum=0.9)
-time0 = time
+time0 = time()
 epochs = 15
 
 for e in range(epochs):
@@ -80,3 +80,5 @@ for images,labels in validloader:
  
 print("images tested: {}".format(all_predictions))
 print("accuracy: {}%".format((correct_predictions/all_predictions)*100))
+
+torch.save(model, r'./mnist_model.pt')
