@@ -68,7 +68,7 @@ all_predictions = 0
 for images,labels in validloader:
     for i in range(len(labels)):
         img = images[i].view(1, 784)
-        with torch.no_grad:
+        with torch.no_grad():
             logps = model(img)
         ps = torch.exp(logps)
         probability = list(ps.numpy()[0])
